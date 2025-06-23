@@ -6,16 +6,16 @@
 #SBATCH --time=00:15:00   # walltime limit (HH:MM:SS)
 #SBATCH --nodes=1   # number of nodes
 #SBATCH --ntasks-per-node=4 
-#SBATCH --job-name="test"
-#SBATCH --output="test.o%j" # job standard output file (%j replaced by job id)
-#SBATCH --error="test.e%j" # job standard error file (%j replaced by job id)
+#SBATCH --job-name="images"
+#SBATCH --output="images.o%j" # job standard output file (%j replaced by job id)
+#SBATCH --error="images.e%j" # job standard error file (%j replaced by job id)
 
 # LOAD MODULES, INSERT CODE, AND RUN YOUR PROGRAMS HERE
 # Loads most recent Python installed on cluster. See all modules with command module avail
 
 module load python
 
-$VENV='images'
+VENV='images'
 if [ ! -f "$VENV/bin/activate" ]; then
 	echo 'Initializing Pyhton environment...'
 	python3 -m venv images

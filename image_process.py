@@ -37,6 +37,8 @@ if __name__ == '__main__':
     plot_args = {}
     if '-centered' in opts:
         plot_args.update({'opt':True})
+    if '-skip' in opts:
+        plot_args.update({'check_skip':True})
 
     #Run
     print(f"Starting with {core_count} counts")
