@@ -39,9 +39,9 @@ def worker(filename, fn_name, plot_args):
     try:
         fn(filename, **plot_args)
         elapsed = time.time() - start_time
-        print(f"[PID {pid}] ✅ Completed {filename} in {elapsed:.2f}s", flush=True)
+        print(f"[PID {pid}] Completed {filename} in {elapsed:.2f}s", flush=True)
     except Exception as e:
-        print(f"[PID {pid}] ❌ Error processing {filename}: {e}", flush=True)
+        print(f"[PID {pid}] Error processing {filename}: {e}", flush=True)
 
 
 # -------------------------------
